@@ -1,0 +1,1160 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://bigstickcarpet.github.io/swagger-parser"
+
+    >swagger-parser (v3.4.1)</a>
+</h1>
+<h4>Swagger 2.0 parser and validator for Node and browsers</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.swagger-parser">module swagger-parser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.swagger-parser">
+            function <span class="apidocSignatureSpan"></span>swagger-parser
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.bundle">
+            function <span class="apidocSignatureSpan">swagger-parser.</span>bundle
+            <span class="apidocSignatureSpan">(schema, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.dereference">
+            function <span class="apidocSignatureSpan">swagger-parser.</span>dereference
+            <span class="apidocSignatureSpan">(schema, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.options">
+            function <span class="apidocSignatureSpan">swagger-parser.</span>options
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.parse">
+            function <span class="apidocSignatureSpan">swagger-parser.</span>parse
+            <span class="apidocSignatureSpan">(schema, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.resolve">
+            function <span class="apidocSignatureSpan">swagger-parser.</span>resolve
+            <span class="apidocSignatureSpan">(schema, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.super_">
+            function <span class="apidocSignatureSpan">swagger-parser.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.validate">
+            function <span class="apidocSignatureSpan">swagger-parser.</span>validate
+            <span class="apidocSignatureSpan">(api, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">swagger-parser.</span>YAML</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">swagger-parser.</span>super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">swagger-parser.</span>util</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.swagger-parser.YAML">module swagger-parser.YAML</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.YAML.parse">
+            function <span class="apidocSignatureSpan">swagger-parser.YAML.</span>parse
+            <span class="apidocSignatureSpan">(text, reviver)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.YAML.stringify">
+            function <span class="apidocSignatureSpan">swagger-parser.YAML.</span>stringify
+            <span class="apidocSignatureSpan">(value, replacer, space)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.swagger-parser.options">module swagger-parser.options</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.options.options">
+            function <span class="apidocSignatureSpan">swagger-parser.</span>options
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.options.super_">
+            function <span class="apidocSignatureSpan">swagger-parser.options.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.swagger-parser.super_">module swagger-parser.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.super_.super_">
+            function <span class="apidocSignatureSpan">swagger-parser.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.super_.bundle">
+            function <span class="apidocSignatureSpan">swagger-parser.super_.</span>bundle
+            <span class="apidocSignatureSpan">(schema, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.super_.dereference">
+            function <span class="apidocSignatureSpan">swagger-parser.super_.</span>dereference
+            <span class="apidocSignatureSpan">(schema, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.super_.parse">
+            function <span class="apidocSignatureSpan">swagger-parser.super_.</span>parse
+            <span class="apidocSignatureSpan">(schema, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.super_.resolve">
+            function <span class="apidocSignatureSpan">swagger-parser.super_.</span>resolve
+            <span class="apidocSignatureSpan">(schema, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">swagger-parser.super_.</span>YAML</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.swagger-parser.super_.prototype">module swagger-parser.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.super_.prototype.bundle">
+            function <span class="apidocSignatureSpan">swagger-parser.super_.prototype.</span>bundle
+            <span class="apidocSignatureSpan">(schema, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.super_.prototype.dereference">
+            function <span class="apidocSignatureSpan">swagger-parser.super_.prototype.</span>dereference
+            <span class="apidocSignatureSpan">(schema, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.super_.prototype.parse">
+            function <span class="apidocSignatureSpan">swagger-parser.super_.prototype.</span>parse
+            <span class="apidocSignatureSpan">(schema, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.super_.prototype.resolve">
+            function <span class="apidocSignatureSpan">swagger-parser.super_.prototype.</span>resolve
+            <span class="apidocSignatureSpan">(schema, options, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.swagger-parser.util">module swagger-parser.util</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.util.debug">
+            function <span class="apidocSignatureSpan">swagger-parser.util.</span>debug
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.util.format">
+            function <span class="apidocSignatureSpan">swagger-parser.util.</span>format
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-parser.util.inherits">
+            function <span class="apidocSignatureSpan">swagger-parser.util.</span>inherits
+            <span class="apidocSignatureSpan">(ctor, superCtor)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">swagger-parser.util.</span>swaggerParamRegExp</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.swagger-parser" id="apidoc.module.swagger-parser">module swagger-parser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.swagger-parser" id="apidoc.element.swagger-parser.swagger-parser">
+        function <span class="apidocSignatureSpan"></span>swagger-parser
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SwaggerParser() {
+  $RefParser.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.bundle" id="apidoc.element.swagger-parser.bundle">
+        function <span class="apidocSignatureSpan">swagger-parser.</span>bundle
+        <span class="apidocSignatureSpan">(schema, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bundle = function (schema, options, callback) {
+  var Class = this; // eslint-disable-line consistent-this
+  return new Class().bundle(schema, options, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.dereference" id="apidoc.element.swagger-parser.dereference">
+        function <span class="apidocSignatureSpan">swagger-parser.</span>dereference
+        <span class="apidocSignatureSpan">(schema, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dereference = function (schema, options, callback) {
+  var Class = this; // eslint-disable-line consistent-this
+  return new Class().dereference(schema, options, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.options" id="apidoc.element.swagger-parser.options">
+        function <span class="apidocSignatureSpan">swagger-parser.</span>options
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ParserOptions(options) {
+  this.validate = {
+    schema: true,
+    spec: true
+  };
+
+  $RefParserOptions.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.parse" id="apidoc.element.swagger-parser.parse">
+        function <span class="apidocSignatureSpan">swagger-parser.</span>parse
+        <span class="apidocSignatureSpan">(schema, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (schema, options, callback) {
+  var Class = this; // eslint-disable-line consistent-this
+  return new Class().parse(schema, options, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.resolve" id="apidoc.element.swagger-parser.resolve">
+        function <span class="apidocSignatureSpan">swagger-parser.</span>resolve
+        <span class="apidocSignatureSpan">(schema, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resolve = function (schema, options, callback) {
+  var Class = this; // eslint-disable-line consistent-this
+  return new Class().resolve(schema, options, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.super_" id="apidoc.element.swagger-parser.super_">
+        function <span class="apidocSignatureSpan">swagger-parser.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function $RefParser() {
+<span class="apidocCodeCommentSpan">  /**
+   * The parsed (and possibly dereferenced) JSON schema object
+   *
+   * @type {object}
+   * @readonly
+   */
+</span>  this.schema = null;
+
+  /**
+   * The resolved JSON references
+   *
+   * @type {$Refs}
+   */
+  this.$refs = new $Refs();
+
+  /**
+   * The file path or URL of the main JSON schema file.
+   * This will be empty if the schema was passed as an object rather than a path.
+   *
+   * @type {string}
+   * @protected
+   */
+  this._basePath = &#x27;&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.validate" id="apidoc.element.swagger-parser.validate">
+        function <span class="apidocSignatureSpan">swagger-parser.</span>validate
+        <span class="apidocSignatureSpan">(api, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">validate = function (api, options, callback) {
+  var Class = this; // eslint-disable-line consistent-this
+  return new Class().validate(api, options, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- [Swagger Express Middleware](https://github.com/BigstickCarpet/swagger-express-middleware)
+
+
+Example
+--------------------------
+
+```javascript
+SwaggerParser.<span class="apidocCodeKeywordSpan">validate</span>(myAPI, function(err, api) {
+  if (err) {
+    console.error(err);
+  }
+  else {
+    console.log(&#x22;API name: %s, Version: %s&#x22;, api.info.title, api.info.version);
+  }
+});
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.swagger-parser.YAML" id="apidoc.module.swagger-parser.YAML">module swagger-parser.YAML</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.YAML.parse" id="apidoc.element.swagger-parser.YAML.parse">
+        function <span class="apidocSignatureSpan">swagger-parser.YAML.</span>parse
+        <span class="apidocSignatureSpan">(text, reviver)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function yamlParse(text, reviver) {
+  try {
+    return yaml.safeLoad(text);
+  }
+  catch (e) {
+    if (e instanceof Error) {
+      throw e;
+    }
+    else {
+      // https://github.com/nodeca/js-yaml/issues/153
+      throw ono(e, e.message);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.YAML.stringify" id="apidoc.element.swagger-parser.YAML.stringify">
+        function <span class="apidocSignatureSpan">swagger-parser.YAML.</span>stringify
+        <span class="apidocSignatureSpan">(value, replacer, space)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function yamlStringify(value, replacer, space) {
+  try {
+    var indent = (typeof space === &#x27;string&#x27; ? space.length : space) || 2;
+    return yaml.safeDump(value, {indent: indent});
+  }
+  catch (e) {
+    if (e instanceof Error) {
+      throw e;
+    }
+    else {
+      // https://github.com/nodeca/js-yaml/issues/153
+      throw ono(e, e.message);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.swagger-parser.options" id="apidoc.module.swagger-parser.options">module swagger-parser.options</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.options.options" id="apidoc.element.swagger-parser.options.options">
+        function <span class="apidocSignatureSpan">swagger-parser.</span>options
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ParserOptions(options) {
+  this.validate = {
+    schema: true,
+    spec: true
+  };
+
+  $RefParserOptions.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.options.super_" id="apidoc.element.swagger-parser.options.super_">
+        function <span class="apidocSignatureSpan">swagger-parser.options.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function $RefParserOptions(options) {
+<span class="apidocCodeCommentSpan">  /**
+   * Determines what types of files can be parsed
+   */
+</span>  this.allow = {
+    /**
+     * Are JSON files allowed?
+     * If false, then all schemas must be in YAML format.
+     * @type {boolean}
+     */
+    json: true,
+
+    /**
+     * Are YAML files allowed?
+     * If false, then all schemas must be in JSON format.
+     * @type {boolean}
+     */
+    yaml: true,
+
+    /**
+     * Are zero-byte files allowed?
+     * If false, then an error will be thrown if a file is empty.
+     * @type {boolean}
+     */
+    empty: true,
+
+    /**
+     * Can unknown file types be $referenced?
+     * If true, then they will be parsed as Buffers (byte arrays).
+     * If false, then an error will be thrown.
+     * @type {boolean}
+     */
+    unknown: true
+  };
+
+  /**
+   * Determines the types of JSON references that are allowed.
+   */
+  this.$refs = {
+    /**
+     * Allow JSON references to other parts of the same file?
+     * @type {boolean}
+     */
+    internal: true,
+
+    /**
+     * Allow JSON references to external files/URLs?
+     * @type {boolean}
+     */
+    external: true,
+
+    /**
+     * Allow circular (recursive) JSON references?
+     * If false, then a {@link ReferenceError} will be thrown if a circular reference is found.
+     * If &#x22;ignore&#x22;, then circular references will not be dereferenced.
+     * @type {boolean|string}
+     */
+    circular: true
+  };
+
+  /**
+   * How long to cache files (in seconds).
+   */
+  this.cache = {
+    /**
+     * How long to cache local files, in seconds.
+     * @type {number}
+     */
+    fs: 60, // 1 minute
+
+    /**
+     * How long to cache files downloaded via HTTP, in seconds.
+     * @type {number}
+     */
+    http: 5 * 60, // 5 minutes
+
+    /**
+     * How long to cache files downloaded via HTTPS, in seconds.
+     * @type {number}
+     */
+    https: 5 * 60 // 5 minutes
+  };
+
+  merge(options, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.swagger-parser.super_" id="apidoc.module.swagger-parser.super_">module swagger-parser.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.super_.super_" id="apidoc.element.swagger-parser.super_.super_">
+        function <span class="apidocSignatureSpan">swagger-parser.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function $RefParser() {
+<span class="apidocCodeCommentSpan">  /**
+   * The parsed (and possibly dereferenced) JSON schema object
+   *
+   * @type {object}
+   * @readonly
+   */
+</span>  this.schema = null;
+
+  /**
+   * The resolved JSON references
+   *
+   * @type {$Refs}
+   */
+  this.$refs = new $Refs();
+
+  /**
+   * The file path or URL of the main JSON schema file.
+   * This will be empty if the schema was passed as an object rather than a path.
+   *
+   * @type {string}
+   * @protected
+   */
+  this._basePath = &#x27;&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.super_.bundle" id="apidoc.element.swagger-parser.super_.bundle">
+        function <span class="apidocSignatureSpan">swagger-parser.super_.</span>bundle
+        <span class="apidocSignatureSpan">(schema, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bundle = function (schema, options, callback) {
+  var Class = this; // eslint-disable-line consistent-this
+  return new Class().bundle(schema, options, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.super_.dereference" id="apidoc.element.swagger-parser.super_.dereference">
+        function <span class="apidocSignatureSpan">swagger-parser.super_.</span>dereference
+        <span class="apidocSignatureSpan">(schema, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dereference = function (schema, options, callback) {
+  var Class = this; // eslint-disable-line consistent-this
+  return new Class().dereference(schema, options, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.super_.parse" id="apidoc.element.swagger-parser.super_.parse">
+        function <span class="apidocSignatureSpan">swagger-parser.super_.</span>parse
+        <span class="apidocSignatureSpan">(schema, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (schema, options, callback) {
+  var Class = this; // eslint-disable-line consistent-this
+  return new Class().parse(schema, options, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.super_.resolve" id="apidoc.element.swagger-parser.super_.resolve">
+        function <span class="apidocSignatureSpan">swagger-parser.super_.</span>resolve
+        <span class="apidocSignatureSpan">(schema, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resolve = function (schema, options, callback) {
+  var Class = this; // eslint-disable-line consistent-this
+  return new Class().resolve(schema, options, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.swagger-parser.super_.prototype" id="apidoc.module.swagger-parser.super_.prototype">module swagger-parser.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.super_.prototype.bundle" id="apidoc.element.swagger-parser.super_.prototype.bundle">
+        function <span class="apidocSignatureSpan">swagger-parser.super_.prototype.</span>bundle
+        <span class="apidocSignatureSpan">(schema, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bundle = function (schema, options, callback) {
+  var me = this;
+  var args = normalizeArgs(arguments);
+
+  return this.resolve(args.schema, args.options)
+    .then(function() {
+      bundle(me, args.options);
+      return maybe(args.callback, Promise.resolve(me.schema));
+    })
+    .catch(function(err) {
+      return maybe(args.callback, Promise.reject(err));
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.super_.prototype.dereference" id="apidoc.element.swagger-parser.super_.prototype.dereference">
+        function <span class="apidocSignatureSpan">swagger-parser.super_.prototype.</span>dereference
+        <span class="apidocSignatureSpan">(schema, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dereference = function (schema, options, callback) {
+  var me = this;
+  var args = normalizeArgs(arguments);
+
+  return this.resolve(args.schema, args.options)
+    .then(function() {
+      dereference(me, args.options);
+      return maybe(args.callback, Promise.resolve(me.schema));
+    })
+    .catch(function(err) {
+      return maybe(args.callback, Promise.reject(err));
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.super_.prototype.parse" id="apidoc.element.swagger-parser.super_.prototype.parse">
+        function <span class="apidocSignatureSpan">swagger-parser.super_.prototype.</span>parse
+        <span class="apidocSignatureSpan">(schema, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (schema, options, callback) {
+  var args = normalizeArgs(arguments);
+
+  if (args.schema &#x26;&#x26; typeof args.schema === &#x27;object&#x27;) {
+    // The schema is an object, not a path/url
+    this.schema = args.schema;
+    this._basePath = &#x27;&#x27;;
+    var $ref = new $Ref(this.$refs, this._basePath);
+    $ref.setValue(this.schema, args.options);
+
+    return maybe(args.callback, Promise.resolve(this.schema));
+  }
+
+  if (!args.schema || typeof args.schema !== &#x27;string&#x27;) {
+    var err = ono(&#x27;Expected a file path, URL, or object. Got %s&#x27;, args.schema);
+    return maybe(args.callback, Promise.reject(err));
+  }
+
+  var me = this;
+
+  // Resolve the absolute path of the schema
+  args.schema = util.path.localPathToUrl(args.schema);
+  args.schema = url.resolve(util.path.cwd(), args.schema);
+  this._basePath = util.path.stripHash(args.schema);
+
+  // Read the schema file/url
+  return read(args.schema, this.$refs, args.options)
+    .then(function(cached$Ref) {
+      var value = cached$Ref.$ref.value;
+      if (!value || typeof value !== &#x27;object&#x27; || value instanceof Buffer) {
+        throw ono.syntax(&#x27;&#x22;%s&#x22; is not a valid JSON Schema&#x27;, me._basePath);
+      }
+      else {
+        me.schema = value;
+        return maybe(args.callback, Promise.resolve(me.schema));
+      }
+    })
+    .catch(function(e) {
+      return maybe(args.callback, Promise.reject(e));
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.super_.prototype.resolve" id="apidoc.element.swagger-parser.super_.prototype.resolve">
+        function <span class="apidocSignatureSpan">swagger-parser.super_.prototype.</span>resolve
+        <span class="apidocSignatureSpan">(schema, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resolve = function (schema, options, callback) {
+  var me = this;
+  var args = normalizeArgs(arguments);
+
+  return this.parse(args.schema, args.options)
+    .then(function() {
+      return resolve(me, args.options);
+    })
+    .then(function() {
+      return maybe(args.callback, Promise.resolve(me.$refs));
+    })
+    .catch(function(err) {
+      return maybe(args.callback, Promise.reject(err));
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.swagger-parser.util" id="apidoc.module.swagger-parser.util">module swagger-parser.util</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.util.debug" id="apidoc.element.swagger-parser.util.debug">
+        function <span class="apidocSignatureSpan">swagger-parser.util.</span>debug
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function debug() {
+  // disabled?
+  if (!debug.enabled) return;
+
+  var self = debug;
+
+  // set `diff` timestamp
+  var curr = +new Date();
+  var ms = curr - (prevTime || curr);
+  self.diff = ms;
+  self.prev = prevTime;
+  self.curr = curr;
+  prevTime = curr;
+
+  // turn the `arguments` into a proper Array
+  var args = new Array(arguments.length);
+  for (var i = 0; i &#x3c; args.length; i++) {
+    args[i] = arguments[i];
+  }
+
+  args[0] = exports.coerce(args[0]);
+
+  if (&#x27;string&#x27; !== typeof args[0]) {
+    // anything else let&#x27;s inspect with %O
+    args.unshift(&#x27;%O&#x27;);
+  }
+
+  // apply any `formatters` transformations
+  var index = 0;
+  args[0] = args[0].replace(/%([a-zA-Z%])/g, function(match, format) {
+    // if we encounter an escaped % then don&#x27;t increase the array index
+    if (match === &#x27;%%&#x27;) return match;
+    index++;
+    var formatter = exports.formatters[format];
+    if (&#x27;function&#x27; === typeof formatter) {
+      var val = args[index];
+      match = formatter.call(self, val);
+
+      // now we need to remove `args[index]` since it&#x27;s inlined in the `format`
+      args.splice(index, 1);
+      index--;
+    }
+    return match;
+  });
+
+  // apply env-specific formatting (colors, etc.)
+  exports.formatArgs.call(self, args);
+
+  var logFn = debug.log || exports.log || console.log.bind(console);
+  logFn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+ * Validates the given Swagger API against the Swagger 2.0 schema.
+ *
+ * @param {SwaggerObject} api
+ */
+function validateSchema(api) {
+util.<span class="apidocCodeKeywordSpan">debug</span>(&#x27;Validating against the Swagger 2.0 schema&#x27;);
+
+// Validate the API against the Swagger schema
+var isValid = ZSchema.validate(api, swaggerSchema);
+
+if (isValid) {
+  util.debug(&#x27;    Validated successfully&#x27;);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.util.format" id="apidoc.element.swagger-parser.util.format">
+        function <span class="apidocSignatureSpan">swagger-parser.util.</span>format
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">format = function (f) {
+  if (typeof f !== &#x27;string&#x27;) {
+    const objects = new Array(arguments.length);
+    for (var index = 0; index &#x3c; arguments.length; index++) {
+      objects[index] = inspect(arguments[index]);
+    }
+    return objects.join(&#x27; &#x27;);
+  }
+
+  var argLen = arguments.length;
+
+  if (argLen === 1) return f;
+
+  var str = &#x27;&#x27;;
+  var a = 1;
+  var lastPos = 0;
+  for (var i = 0; i &#x3c; f.length;) {
+    if (f.charCodeAt(i) === 37/*&#x27;%&#x27;*/ &#x26;&#x26; i + 1 &#x3c; f.length) {
+      switch (f.charCodeAt(i + 1)) {
+        case 100: // &#x27;d&#x27;
+          if (a &#x3e;= argLen)
+            break;
+          if (lastPos &#x3c; i)
+            str += f.slice(lastPos, i);
+          str += Number(arguments[a++]);
+          lastPos = i = i + 2;
+          continue;
+        case 106: // &#x27;j&#x27;
+          if (a &#x3e;= argLen)
+            break;
+          if (lastPos &#x3c; i)
+            str += f.slice(lastPos, i);
+          str += tryStringify(arguments[a++]);
+          lastPos = i = i + 2;
+          continue;
+        case 115: // &#x27;s&#x27;
+          if (a &#x3e;= argLen)
+            break;
+          if (lastPos &#x3c; i)
+            str += f.slice(lastPos, i);
+          str += String(arguments[a++]);
+          lastPos = i = i + 2;
+          continue;
+        case 37: // &#x27;%&#x27;
+          if (lastPos &#x3c; i)
+            str += f.slice(lastPos, i);
+          str += &#x27;%&#x27;;
+          lastPos = i = i + 2;
+          continue;
+      }
+    }
+    ++i;
+  }
+  if (lastPos === 0)
+    str = f;
+  else if (lastPos &#x3c; f.length)
+    str += f.slice(lastPos);
+  while (a &#x3c; argLen) {
+    const x = arguments[a++];
+    if (x === null || (typeof x !== &#x27;object&#x27; &#x26;&#x26; typeof x !== &#x27;symbol&#x27;)) {
+      str += &#x27; &#x27; + x;
+    } else {
+      str += &#x27; &#x27; + inspect(x);
+    }
+  }
+  return str;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {string}    [indent]   - The whitespace used to indent the error message
+ * @returns {string}
+ */
+function formatZSchemaError(errors, indent) {
+  indent = indent || &#x27;  &#x27;;
+  var message = &#x27;&#x27;;
+  errors.forEach(function(error, index) {
+    message += util.<span class="apidocCodeKeywordSpan">format</span>(&#x27;%s%s at #/%s\n&#x27;, indent, error.message, error.path
+.join(&#x27;/&#x27;));
+    if (error.inner) {
+      message += formatZSchemaError(error.inner, indent + &#x27;  &#x27;);
+    }
+  });
+  return message;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-parser.util.inherits" id="apidoc.element.swagger-parser.util.inherits">
+        function <span class="apidocSignatureSpan">swagger-parser.util.</span>inherits
+        <span class="apidocSignatureSpan">(ctor, superCtor)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inherits = function (ctor, superCtor) {
+
+  if (ctor === undefined || ctor === null)
+    throw new TypeError(&#x27;The constructor to &#x22;inherits&#x22; must not be &#x27; +
+                        &#x27;null or undefined&#x27;);
+
+  if (superCtor === undefined || superCtor === null)
+    throw new TypeError(&#x27;The super constructor to &#x22;inherits&#x22; must not &#x27; +
+                        &#x27;be null or undefined&#x27;);
+
+  if (superCtor.prototype === undefined)
+    throw new TypeError(&#x27;The super constructor to &#x22;inherits&#x22; must &#x27; +
+                        &#x27;have a prototype&#x27;);
+
+  ctor.super_ = superCtor;
+  Object.setPrototypeOf(ctor.prototype, superCtor.prototype);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    schema: true,
+    spec: true
+  };
+
+  $RefParserOptions.apply(this, arguments);
+}
+
+util.<span class="apidocCodeKeywordSpan">inherits</span>(ParserOptions, $RefParserOptions);
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
